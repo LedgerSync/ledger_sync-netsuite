@@ -1,0 +1,21 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp
+
+# byebug
+.byebug_history
+
+# Mac
+.DS_Store
+
+# dotenv
+.env
+*.local
+
+.tool-versions
+.ruby-version

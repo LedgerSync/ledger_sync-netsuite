@@ -157,7 +157,7 @@ module LedgerSync
           url: request_url
         )
 
-        request = Request.new(
+        request = LedgerSync::Ledgers::Request.new(
           body: body,
           headers: headers
             .merge(HEADERS)

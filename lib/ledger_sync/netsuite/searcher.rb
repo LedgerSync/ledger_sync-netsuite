@@ -44,7 +44,7 @@ module LedgerSync
             if request.body['title'].include?(
               'Invalid search query Search error occurred: Record ‘subsidiary’ was not found'
             )
-              raise LedgerSync::Ledgers::NetSuite::Error::SubsidiariesNotEnabled
+              raise LedgerSync::NetSuite::Error::SubsidiariesNotEnabled
             end
           end
         end

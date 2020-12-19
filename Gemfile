@@ -6,5 +6,3 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 # Specify your gem's dependencies in ledger_sync-netsuite.gemspec
 gemspec
-
-gem 'ledger_sync', path: '../ledger_sync'

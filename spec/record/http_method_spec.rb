@@ -60,7 +60,7 @@ RSpec.describe LedgerSync::NetSuite::Record::HTTPMethod do
           }
         ],
         "responses": {
-          "200": {
+          '200' => {
             "description": 'List of records.',
             "content": {
               "application/vnd.oracle.resource+json; type=collection": {

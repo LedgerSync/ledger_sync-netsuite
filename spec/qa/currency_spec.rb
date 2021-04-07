@@ -10,7 +10,7 @@ RSpec.describe LedgerSync::NetSuite::Currency, qa: true, client: :netsuite do
     }
   end
   let(:record) { :currency }
-  let(:currency_iso_code) { ENV.fetch('NETSUITE_KNOWN_SUBSIDIARY_ID')}
+  let(:currency_iso_code) { ENV.fetch('NETSUITE_KNOWN_SUBSIDIARY_ID') }
   let(:resource) do
     FactoryBot.create(:netsuite_currency, symbol: currency_iso_code)
   end

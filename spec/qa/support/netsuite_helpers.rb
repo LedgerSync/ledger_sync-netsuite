@@ -18,13 +18,6 @@ module QA
       )
     end
 
-    def existing_netsuite_subsidiary_resource
-      LedgerSync::NetSuite::Subsidiary.new(
-        ledger_id: ENV.fetch('NETSUITE_KNOWN_SUBSIDIARY_ID'),
-        name: "QA Subsidary #{test_run_id}"
-      )
-    end
-
     def netsuite_client
       @netsuite_client ||= client_class.new_from_env
     end
@@ -39,7 +32,8 @@ module QA
 
     def known_subsidiary
       LedgerSync::NetSuite::Subsidiary.new(
-        ledger_id: ENV.fetch('NETSUITE_KNOWN_SUBSIDIARY_ID')
+        ledger_id: ENV.fetch('NETSUITE_KNOWN_SUBSIDIARY_ID'),
+        name: "QA Subsidary #{test_run_id}"
       )
     end
 
@@ -64,6 +58,12 @@ module QA
     def known_account
       LedgerSync::NetSuite::Account.new(
         ledger_id: ENV.fetch('NETSUITE_KNOWN_RECEIVABLES_ACCOUNT_ID')
+      )
+    end
+
+    def known_vendor
+      LedgerSync::NetSuite::Vendor.new(
+        ledger_id: ENV.fetch('NETSUITE_KNOWN_VENDOR_ID')
       )
     end
   end

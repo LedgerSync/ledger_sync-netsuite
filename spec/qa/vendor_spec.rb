@@ -18,7 +18,7 @@ RSpec.describe LedgerSync::NetSuite::Vendor, qa: true, client: :netsuite do
       first_name: "TestFirst#{test_run_id}",
       last_name: "TestLast#{test_run_id}",
       display_name: "Test #{test_run_id} Display Name",
-      subsidiary: existing_netsuite_subsidiary_resource
+      subsidiary: known_subsidiary
     )
   end
 

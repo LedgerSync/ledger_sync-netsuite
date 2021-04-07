@@ -6,7 +6,7 @@ module LedgerSync
   module NetSuite
     class JournalEntryLineItem
       class Serializer < NetSuite::Serializer
-        attribute :line
+        # attribute :line
         attribute :entitytype
         attribute :credit
         attribute :debit

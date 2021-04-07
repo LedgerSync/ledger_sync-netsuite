@@ -13,16 +13,16 @@ RSpec.describe LedgerSync::NetSuite::Check, qa: true, client: :netsuite do
   let(:resource) do
     LedgerSync::NetSuite::Check.new(
       memo: 'Hello World',
-      trandate: '2020-06-01',
-      entity: LedgerSync::NetSuite::Vendor.new(ledger_id: 52),
-      account: LedgerSync::NetSuite::Account.new(ledger_id: 316),
+      trandate: Date.today.to_s,
+      entity: LedgerSync::NetSuite::Vendor.new(ledger_id: ENV.fetch('NETSUITE_KNOWN_VENDOR_ID')),
+      account: LedgerSync::NetSuite::Account.new(ledger_id: ENV.fetch('NETSUITE_KNOWN_CHECKING_ACCOUNT_ID')),
       department: nil,
-      currency: LedgerSync::NetSuite::Currency.new(ledger_id: 1),
+      currency: LedgerSync::NetSuite::Currency.new(ledger_id: ENV.fetch('NETSUITE_KNOWN_CURRENCY_ID')),
       external_id: "external_id_test_#{test_run_id}",
       line_items: [
         LedgerSync::NetSuite::CheckLineItem.new(
           amount: 12.20,
-          account: LedgerSync::NetSuite::Account.new(ledger_id: 227),
+          account: LedgerSync::NetSuite::Account.new(ledger_id: ENV.fetch('NETSUITE_KNOWN_EXPENSES_ACCOUNT_ID')),
           department: nil
         )
       ]

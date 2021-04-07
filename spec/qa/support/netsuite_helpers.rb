@@ -11,12 +11,6 @@ module QA
       LedgerSync::NetSuite::Client
     end
 
-    def existing_account_resource
-      LedgerSync::NetSuite::Account.new(
-        ledger_id: 220
-      )
-    end
-
     def existing_customer_resource
       LedgerSync::NetSuite::Customer.new(
         ledger_id: 316,
@@ -26,13 +20,51 @@ module QA
 
     def existing_netsuite_subsidiary_resource
       LedgerSync::NetSuite::Subsidiary.new(
-        ledger_id: 2,
+        ledger_id: ENV.fetch('NETSUITE_KNOWN_SUBSIDIARY_ID'),
         name: "QA Subsidary #{test_run_id}"
       )
     end
 
     def netsuite_client
       @netsuite_client ||= client_class.new_from_env
+    end
+
+    # Known Entities
+
+    def known_currency
+      LedgerSync::NetSuite::Currency.new(
+        ledger_id: ENV.fetch('NETSUITE_KNOWN_CURRENCY_ID')
+      )
+    end
+
+    def known_subsidiary
+      LedgerSync::NetSuite::Subsidiary.new(
+        ledger_id: ENV.fetch('NETSUITE_KNOWN_SUBSIDIARY_ID')
+      )
+    end
+
+    def known_expenses_account
+      LedgerSync::NetSuite::Account.new(
+        ledger_id: ENV.fetch('NETSUITE_KNOWN_EXPENSES_ACCOUNT_ID')
+      )
+    end
+
+    def known_checking_account
+      LedgerSync::NetSuite::Account.new(
+        ledger_id: ENV.fetch('NETSUITE_KNOWN_CHECKING_ACCOUNT_ID')
+      )
+    end
+
+    def known_receivables_account
+      LedgerSync::NetSuite::Account.new(
+        ledger_id: ENV.fetch('NETSUITE_KNOWN_RECEIVABLES_ACCOUNT_ID')
+      )
+    end
+
+    def known_account
+      LedgerSync::NetSuite::Account.new(
+        ledger_id: ENV.fetch('NETSUITE_KNOWN_RECEIVABLES_ACCOUNT_ID')
+      )
     end
   end
 end

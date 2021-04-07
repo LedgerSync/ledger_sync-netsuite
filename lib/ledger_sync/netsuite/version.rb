@@ -3,16 +3,14 @@
 # :nocov:
 module LedgerSync
   module NetSuite
-    VERSION = '0.1.1'
+    VERSION = '0.1.0'
 
     def self.version(args = {})
-      pre = args.fetch(:pre, false)
+      pre = ENV['PRE_RELEASE'] || args.fetch(:pre, false)
 
-      if !pre && (!ENV['TRAVIS'] || ENV.fetch('TRAVIS_TAG', '') != '')
-        VERSION
-      else
-        "#{VERSION}.pre.#{ENV['TRAVIS_BUILD_NUMBER']}"
-      end
+      return VERSION unless pre
+
+      "#{VERSION}.pre.#{ENV['TRAVIS_BUILD_NUMBER']}"
     end
   end
 end

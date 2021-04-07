@@ -1,0 +1,4 @@
+This repo and all the code within are licensed under the same licensing as the LedgerSync core gem:
+https://github.com/LedgerSync/ledger_sync
+
+Any updates to those licenses are to take effect here on the same date as per the terms of the license.

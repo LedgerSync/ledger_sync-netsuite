@@ -1,0 +1,24 @@
+# frozen_string_literal: true
+
+require_relative '../reference/serializer'
+
+module LedgerSync
+  module NetSuite
+    class CheckLineItem
+      class Serializer < NetSuite::Serializer
+        attribute :amount
+        attribute :memo
+
+        references_one :account,
+                       serializer: Reference::Serializer
+
+        references_one :department,
+                       serializer: Reference::Serializer
+
+        references_one :class,
+                       resource_attribute: :ledger_class,
+                       serializer: Reference::Serializer
+      end
+    end
+  end
+end

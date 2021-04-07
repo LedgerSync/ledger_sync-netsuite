@@ -283,9 +283,7 @@ module NetSuiteHelpers # rubocop:disable Metrics/ModuleLength
         response_body: opts.hash,
         url: send(
           url_method_name,
-          params: params.merge(
-            expandSubResources: true
-          ),
+          params: params,
           id: opts.id
         )
       )

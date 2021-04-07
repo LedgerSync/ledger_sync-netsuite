@@ -9,7 +9,17 @@ module LedgerSync
         include NetSuite::Operation::Mixin
 
         def request_params
-          super.merge({ expandSubResources: true })
+          return super unless expand_sub_resources?
+
+          super.merge({ expandSubResources: expand_sub_resources? })
+        end
+
+        def expand_sub_resources?
+          self.class.expand_sub_resources?
+        end
+
+        def self.expand_sub_resources?
+          true
         end
 
         private

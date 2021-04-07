@@ -14,6 +14,10 @@ module LedgerSync
               required(:exchange_rate).maybe(:float)
             end
           end
+
+          def self.expand_sub_resources?
+            false
+          end
         end
       end
     end

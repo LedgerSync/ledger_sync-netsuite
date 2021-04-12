@@ -2,7 +2,16 @@
 
 require 'spec_helper'
 
-RSpec.describe LedgerSync::NetSuite do
-  it { expect(described_class).to respond_to(:version) }
-  it { expect(described_class.version(pre: true)).to include('.pre.') }
+module LedgerSync
+  RSpec.describe NetSuite do
+    it 'has a version number' do
+      expect(described_class).to respond_to(:version)
+    end
+
+    it 'has a version number in pre release' do
+      ClimateControl.modify PRE_RELEASE: 'true' do
+        expect(described_class.version).to include('pre')
+      end
+    end
+  end
 end

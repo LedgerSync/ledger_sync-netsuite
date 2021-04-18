@@ -38,7 +38,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency('rubocop', '>= 0')
   spec.add_development_dependency('webmock', '>= 0')
   spec.add_runtime_dependency('dotenv')
-  spec.add_runtime_dependency('ledger_sync', '1.8.0')
+  spec.add_runtime_dependency('ledger_sync', '2.0.0')
   spec.add_runtime_dependency('nokogiri', '>= 0')
   spec.add_runtime_dependency('oauth2', '>= 0')
 end

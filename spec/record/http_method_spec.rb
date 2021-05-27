@@ -24,57 +24,57 @@ RSpec.describe LedgerSync::NetSuite::Record::HTTPMethod do
     let(:summary) { 'Get list of records.' }
     let(:data) do
       {
-        "tags": [
+        tags: [
           'Customer (Beta)'
         ],
-        "summary": 'Get list of records.',
-        "parameters": [
+        summary: 'Get list of records.',
+        parameters: [
           {
-            "name": 'q',
-            "in": 'query',
-            "description": 'Search query used to filter results',
-            "required": false,
-            "schema": {
-              "type": 'string'
+            name: 'q',
+            in: 'query',
+            description: 'Search query used to filter results',
+            required: false,
+            schema: {
+              type: 'string'
             }
           },
           {
-            "name": 'limit',
-            "in": 'query',
-            "description": 'The limit used to specify the number of results on a single page.',
-            "required": false,
-            "schema": {
-              "type": 'integer',
-              "default": 1000
+            name: 'limit',
+            in: 'query',
+            description: 'The limit used to specify the number of results on a single page.',
+            required: false,
+            schema: {
+              type: 'integer',
+              default: 1000
             }
           },
           {
-            "name": 'offset',
-            "in": 'query',
-            "description": 'The offset used for selecting a specific page of results.',
-            "required": false,
-            "schema": {
-              "type": 'integer',
-              "default": 0
+            name: 'offset',
+            in: 'query',
+            description: 'The offset used for selecting a specific page of results.',
+            required: false,
+            schema: {
+              type: 'integer',
+              default: 0
             }
           }
         ],
-        "responses": {
+        responses: {
           '200' => {
-            "description": 'List of records.',
-            "content": {
+            description: 'List of records.',
+            content: {
               "application/vnd.oracle.resource+json; type=collection": {
-                "schema": {
+                schema: {
                   "$ref": '#/components/schemas/customerCollection'
                 }
               }
             }
           },
-          "default": {
-            "description": 'Error response.',
-            "content": {
+          default: {
+            description: 'Error response.',
+            content: {
               "application/vnd.oracle.resource+json; type=error": {
-                "schema": {
+                schema: {
                   "$ref": '#/components/schemas/nsError'
                 }
               }

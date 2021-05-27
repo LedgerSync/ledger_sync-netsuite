@@ -65,13 +65,11 @@ module LedgerSync
 
       # Ref: https://tools.ietf.org/html/rfc5849#section-3.4.1.3.2
       def signature_data_string
-        @signature_data_string ||= begin
-          [
-            method,
-            escape(url_without_params),
-            escape(parameters_string)
-          ].join('&')
-        end
+        @signature_data_string ||= [
+          method,
+          escape(url_without_params),
+          escape(parameters_string)
+        ].join('&')
       end
 
       def signature_key

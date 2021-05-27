@@ -40,10 +40,10 @@ RSpec.describe LedgerSync::NetSuite::Record::Property do
       described_class.new_from_hash(
         {
           key: key,
-          "title": title,
-          "type": type,
-          "nullable": true,
-          "enum": enum
+          title: title,
+          type: type,
+          nullable: true,
+          enum: enum
         }
       )
     end

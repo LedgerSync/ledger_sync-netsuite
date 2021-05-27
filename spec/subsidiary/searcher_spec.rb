@@ -13,9 +13,9 @@ RSpec.describe LedgerSync::NetSuite::Subsidiary::Searcher do
 
   describe 'subsidiaries not enabled case' do
     body = {
-      "type": 'https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1',
-      "title": 'Invalid search query Search error occurred: Record ‘subsidiary’ was not found..',
-      "status": 400,
+      type: 'https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1',
+      title: 'Invalid search query Search error occurred: Record ‘subsidiary’ was not found..',
+      status: 400,
       "o:errorCode": 'INVALID_PARAMETER'
     }
 

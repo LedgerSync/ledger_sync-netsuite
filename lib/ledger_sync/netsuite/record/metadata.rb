@@ -55,14 +55,12 @@ module LedgerSync
         end
 
         def metadata_response
-          @metadata_response = begin
-            client.get(
-              headers: {
-                'Accept' => 'application/swagger+json'
-              },
-              path: "#{BASE_PATH}?select=#{record}"
-            )
-          end
+          @metadata_response = client.get(
+            headers: {
+              'Accept' => 'application/swagger+json'
+            },
+            path: "#{BASE_PATH}?select=#{record}"
+          )
         end
 
         def properties

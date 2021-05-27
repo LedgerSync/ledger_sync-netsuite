@@ -121,7 +121,7 @@ module NetSuiteHelpers # rubocop:disable Metrics/ModuleLength
         status: 200,
         body: '',
         headers: {
-          'Location': "#{url}/#{id}"
+          Location: "#{url}/#{id}"
         }
       )
   end
@@ -163,36 +163,36 @@ module NetSuiteHelpers # rubocop:disable Metrics/ModuleLength
     count.times do |n|
       new_id = (starting_id.to_i + n).to_s
       items << {
-        "links": [
+        links: [
           {
-            "rel": 'self',
-            "href": "#{url}/#{new_id}"
+            rel: 'self',
+            href: "#{url}/#{new_id}"
           }
         ],
-        "id": new_id
+        id: new_id
       }
     end
 
     body = {
-      "links": [
+      links: [
         {
-          "rel": 'next',
-          "href": "#{url}?limit=2&offset=2"
+          rel: 'next',
+          href: "#{url}?limit=2&offset=2"
         },
         {
-          "rel": 'last',
-          "href": "#{url}?limit=2&offset=64"
+          rel: 'last',
+          href: "#{url}?limit=2&offset=64"
         },
         {
-          "rel": 'self',
-          "href": "#{url}?limit=2&offset=0"
+          rel: 'self',
+          href: "#{url}?limit=2&offset=0"
         }
       ],
-      "count": count,
-      "hasMore": true,
-      "items": items,
-      "offset": 0,
-      "totalResults": 65
+      count: count,
+      hasMore: true,
+      items: items,
+      offset: 0,
+      totalResults: 65
     }
 
     stub_request(:get, url)
@@ -215,7 +215,7 @@ module NetSuiteHelpers # rubocop:disable Metrics/ModuleLength
         status: 200,
         body: '',
         headers: {
-          'Location': url
+          Location: url
         }
       )
   end

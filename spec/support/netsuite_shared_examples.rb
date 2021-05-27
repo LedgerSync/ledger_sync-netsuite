@@ -19,11 +19,7 @@ RSpec.shared_examples 'a netsuite operation' do
     case described_class.operation_method
     when :create
       resource.ledger_id = nil
-    when :delete
-      resource.ledger_id = netsuite_records.send(record).hash['id']
-    when :find
-      resource.ledger_id = netsuite_records.send(record).hash['id']
-    when :update
+    when :delete, :find, :update
       resource.ledger_id = netsuite_records.send(record).hash['id']
     end
   end

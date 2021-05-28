@@ -3,6 +3,7 @@
 require_relative '../currency/deserializer'
 require_relative '../subsidiary/deserializer'
 require_relative '../journal_entry_line_item/deserializer'
+require_relative '../ledger_class/deserializer'
 
 module LedgerSync
   module NetSuite
@@ -19,6 +20,7 @@ module LedgerSync
         references_one :currency
 
         references_one :subsidiary
+        references_one :ledger_class, hash_attribute: :class, deserializer: LedgerClass::Deserializer
 
         references_many :line_items,
                         hash_attribute: 'line.items',

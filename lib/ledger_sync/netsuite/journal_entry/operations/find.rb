@@ -14,6 +14,7 @@ module LedgerSync
               optional(:tranId).maybe(:string)
               optional(:currency).maybe(:hash, Types::Reference)
               optional(:subsidiary).maybe(:hash, Types::Reference)
+              required(:ledger_class).maybe(:hash, Types::Reference)
               optional(:line_items).array(Types::Reference)
             end
           end

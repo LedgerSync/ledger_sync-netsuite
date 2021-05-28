@@ -16,6 +16,9 @@ module LedgerSync
         references_one :currency,
                        serializer: Reference::Serializer, if: :currency_present?
 
+        references_one :ledger_class,
+                       serializer: LedgerClass::Serializer
+
         references_one :subsidiary,
                        serializer: Reference::Serializer
 

@@ -2,6 +2,7 @@
 
 require_relative '../reference/serializer'
 require_relative '../journal_entry_line_item/serializer'
+require_relative '../ledger_class/serializer'
 
 module LedgerSync
   module NetSuite

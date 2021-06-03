@@ -20,7 +20,6 @@ module LedgerSync
         references_one :currency
 
         references_one :subsidiary
-        references_one :ledger_class, hash_attribute: :class, deserializer: LedgerClass::Deserializer
 
         references_many :line_items,
                         hash_attribute: 'line.items',

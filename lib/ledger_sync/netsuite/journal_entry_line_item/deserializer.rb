@@ -11,6 +11,11 @@ module LedgerSync
         attribute :credit
         attribute :debit
         attribute :memo
+        attribute :entity,
+                  type: Type::DeserializerEntityType.new
+        references_one :ledger_class,
+                       hash_attribute: :class,
+                       deserializer: LedgerClass::Deserializer
         references_one :account
       end
     end

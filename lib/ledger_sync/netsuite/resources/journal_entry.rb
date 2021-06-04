@@ -13,7 +13,6 @@ module LedgerSync
 
       references_one :currency, to: Currency
       references_one :subsidiary, to: Subsidiary
-      references_one :ledger_class, to: LedgerClass
 
       references_many :line_items, to: JournalEntryLineItem
 

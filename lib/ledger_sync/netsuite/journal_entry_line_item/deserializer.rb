@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../account/deserializer'
+require_relative '../ledger_class/deserializer'
 
 module LedgerSync
   module NetSuite

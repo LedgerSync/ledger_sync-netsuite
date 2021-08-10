@@ -41,4 +41,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency('ledger_sync', '>= 2.0.2')
   spec.add_runtime_dependency('nokogiri', '>= 0')
   spec.add_runtime_dependency('oauth2', '>= 0')
+  spec.add_runtime_dependency('simplecov-lcov')
 end

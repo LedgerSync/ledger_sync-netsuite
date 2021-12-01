@@ -181,6 +181,7 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
+    simplecov-lcov (0.8.0)
     simply_serializable (1.5.1)
       fingerprintable (>= 1.2.1)
     sync (0.5.0)
@@ -213,7 +214,9 @@ DEPENDENCIES
   rake (~> 13.0)
   rspec (~> 3.2)
   rubocop
+  simplecov
+  simplecov-lcov
   webmock
 
 BUNDLED WITH
-   2.2.3
+   2.2.22

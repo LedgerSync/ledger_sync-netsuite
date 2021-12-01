@@ -29,7 +29,7 @@ module LedgerSync
 
       attribute :name, type: Type::String
       attribute :classification, type: Type::String
-      attribute :account_type, type: Type::StringFromSet.new(values: TYPES.keys)
+      attribute :account_type, type: Type::StringFromSet.new({ values: TYPES.keys })
       attribute :account_sub_type, type: Type::String
       attribute :number, type: Type::String
       attribute :description, type: Type::String

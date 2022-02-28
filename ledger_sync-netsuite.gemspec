@@ -27,18 +27,22 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency('awesome_print', '>= 0')
-  spec.add_development_dependency('bump', '~> 0.9.0')
   spec.add_development_dependency('bundler', '~> 2.1')
   spec.add_development_dependency('byebug')
   spec.add_development_dependency('climate_control')
-  spec.add_development_dependency('coveralls', '~> 0.8.23')
-  spec.add_development_dependency('factory_bot', '~> 6.1.0')
+  spec.add_development_dependency('coveralls')
+  spec.add_development_dependency('factory_bot')
   spec.add_development_dependency('rake', '~> 13.0')
   spec.add_development_dependency('rspec', '~> 3.2')
   spec.add_development_dependency('rubocop', '>= 0')
+  spec.add_development_dependency('simplecov')
+  spec.add_development_dependency('simplecov-lcov')
   spec.add_development_dependency('webmock', '>= 0')
   spec.add_runtime_dependency('dotenv')
-  spec.add_runtime_dependency('ledger_sync', '>= 2.0.2')
+  spec.add_runtime_dependency('ledger_sync', '>= 2.3.1')
   spec.add_runtime_dependency('nokogiri', '>= 0')
   spec.add_runtime_dependency('oauth2', '>= 0')
+  spec.metadata = {
+    'rubygems_mfa_required' => 'true'
+  }
 end

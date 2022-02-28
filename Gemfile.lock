@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ledger_sync-netsuite (0.3.5)
+    ledger_sync-netsuite (0.3.6)
       dotenv
       ledger_sync (>= 2.3.1)
       nokogiri

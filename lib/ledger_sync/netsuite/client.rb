@@ -23,18 +23,12 @@ module LedgerSync
                   :token_id,
                   :token_secret
 
-      def initialize(
-        account_id:,
-        consumer_key:,
-        consumer_secret:,
-        token_id:,
-        token_secret:
-      )
-        @account_id = account_id
-        @consumer_key = consumer_key
-        @consumer_secret = consumer_secret
-        @token_id = token_id
-        @token_secret = token_secret
+      def initialize(args = {})
+        @account_id = args.fetch(:account_id)
+        @consumer_key = args.fetch(:consumer_key)
+        @consumer_secret = args.fetch(:consumer_secret)
+        @token_id = args.fetch(:token_id)
+        @token_secret = args.fetch(:token_secret)
 
         super()
       end

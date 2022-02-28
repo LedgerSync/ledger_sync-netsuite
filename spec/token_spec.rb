@@ -6,10 +6,10 @@ require 'spec_helper'
 RSpec.describe LedgerSync::NetSuite::Token do
   let(:expected_signature_data_string) do
     'POST&https%3A%2F%2F1234567.restlets.api.netsuite.com%2Fapp%2Fsite%2Fhosting%2Frestlet.nl&customParam%3DsomeValue'\
-    '%26deploy%3D1%26oauth_consumer_key%3Def40afdd8abaac111b13825dd5e5e2ddddb44f86d5a0dd6dcf38c20aae6b67e4%26'\
-    'oauth_nonce%3DfjaLirsIcCGVZWzBX0pg%26oauth_signature_method%3DHMAC-SHA256%26oauth_timestamp%3D1508242306%26'\
-    'oauth_token%3D2b0ce516420110bcbd36b69e99196d1b7f6de3c6234c5afb799b73d87569f5cc%26oauth_version%3D1.0%26script'\
-    '%3D6%26testParam%3DsomeOtherValue'
+      '%26deploy%3D1%26oauth_consumer_key%3Def40afdd8abaac111b13825dd5e5e2ddddb44f86d5a0dd6dcf38c20aae6b67e4%26'\
+      'oauth_nonce%3DfjaLirsIcCGVZWzBX0pg%26oauth_signature_method%3DHMAC-SHA256%26oauth_timestamp%3D1508242306%26'\
+      'oauth_token%3D2b0ce516420110bcbd36b69e99196d1b7f6de3c6234c5afb799b73d87569f5cc%26oauth_version%3D1.0%26script'\
+      '%3D6%26testParam%3DsomeOtherValue'
   end
 
   let(:account_id) { '1234567' }
@@ -24,7 +24,7 @@ RSpec.describe LedgerSync::NetSuite::Token do
   let(:timestamp) { '1508242306' }
   let(:url) do
     'https://1234567.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=6&deploy=1&customParam=someValue'\
-    '&testParam=someOtherValue'
+      '&testParam=someOtherValue'
   end
 
   let(:token) do

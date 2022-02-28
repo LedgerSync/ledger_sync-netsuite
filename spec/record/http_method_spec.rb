@@ -63,9 +63,9 @@ RSpec.describe LedgerSync::NetSuite::Record::HTTPMethod do
           '200' => {
             description: 'List of records.',
             content: {
-              "application/vnd.oracle.resource+json; type=collection": {
+              'application/vnd.oracle.resource+json; type=collection': {
                 schema: {
-                  "$ref": '#/components/schemas/customerCollection'
+                  '$ref': '#/components/schemas/customerCollection'
                 }
               }
             }
@@ -73,9 +73,9 @@ RSpec.describe LedgerSync::NetSuite::Record::HTTPMethod do
           default: {
             description: 'Error response.',
             content: {
-              "application/vnd.oracle.resource+json; type=error": {
+              'application/vnd.oracle.resource+json; type=error': {
                 schema: {
-                  "$ref": '#/components/schemas/nsError'
+                  '$ref': '#/components/schemas/nsError'
                 }
               }
             }

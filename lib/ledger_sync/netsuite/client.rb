@@ -121,7 +121,9 @@ module LedgerSync
         {
           CustomerDeposit => 'customerdeposit',
           LedgerClass => 'classification',
-          JournalEntry => 'journalEntry'
+          JournalEntry => 'journalEntry',
+          AdvancedIntercompanyJournalEntry => 'advintercompanyjournalentry',
+          IntercompanyJournalEntry => 'intercompanyjournalentry'
         }
       end
 

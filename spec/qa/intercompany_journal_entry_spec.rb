@@ -11,7 +11,7 @@ RSpec.describe LedgerSync::NetSuite::IntercompanyJournalEntry, qa: true, client:
   end
   let(:record) { :intercompany_journal_entry }
   let(:resource) do
-    LedgerSync::NetSuite::JournalEntry.new(
+    LedgerSync::NetSuite::IntercompanyJournalEntry.new(
       memo: 'Hello World',
       trandate: Date.today.to_s,
       currency: known_currency,

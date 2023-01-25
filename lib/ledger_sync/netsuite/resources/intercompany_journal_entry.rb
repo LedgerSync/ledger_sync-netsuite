@@ -14,7 +14,7 @@ module LedgerSync
       references_one :currency, to: Currency
       references_one :subsidiary, to: Subsidiary
 
-      references_many :line_items, to: JournalEntryLineItem
+      references_many :line_items, to: IntercompanyJournalEntryLineItem
 
       def name
         "JournalEntry: #{transaction_date}"

@@ -3,11 +3,11 @@
 # :nocov:
 module LedgerSync
   module NetSuite
-    VERSION = '0.3.6'
+    VERSION = '0.4.0'
 
     def self.version
       if ENV['PRE_RELEASE']
-        "#{VERSION}.pre.#{ENV['GITHUB_RUN_NUMBER']}"
+        "#{VERSION}.pre.#{ENV.fetch('GITHUB_RUN_NUMBER', nil)}"
       else
         VERSION
       end

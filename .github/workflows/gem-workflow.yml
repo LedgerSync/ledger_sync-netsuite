@@ -8,8 +8,9 @@ jobs:
   rubocop:
     strategy:
       matrix:
-        ruby-version: [2.7.5, 3.0.2]
-    runs-on: [ubuntu-latest]
+        os: [ubuntu-latest]
+        ruby-version: ['2.7', '3.0']
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -24,8 +25,9 @@ jobs:
   rspec:
     strategy:
       matrix:
-        ruby-version: [2.7.5, 3.0.2]
-    runs-on: [ubuntu-latest]
+        os: [ubuntu-latest]
+        ruby-version: ['2.7', '3.0']
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
         with:

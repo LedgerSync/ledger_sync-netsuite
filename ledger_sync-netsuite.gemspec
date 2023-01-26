@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.5.8'
 
   spec.summary = 'Sync common objects to accounting software.'
-  spec.description = 'LedgerSync is a simple library that allows you to sync common objects to popular accounting '\
+  spec.description = 'LedgerSync is a simple library that allows you to sync common objects to popular accounting ' \
                      'software like QuickBooks Online, NetSuite, NetSuite, etc.'
   spec.homepage = 'https://www.ledgersync.dev'
 

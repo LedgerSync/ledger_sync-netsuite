@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency('bundler', '~> 2.1')
   spec.add_development_dependency('byebug')
   spec.add_development_dependency('climate_control')
-  spec.add_development_dependency('coveralls')
+  spec.add_development_dependency('coveralls_reborn')
   spec.add_development_dependency('factory_bot')
   spec.add_development_dependency('rake', '~> 13.0')
   spec.add_development_dependency('rspec', '~> 3.2')
@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency('simplecov-lcov')
   spec.add_development_dependency('webmock', '>= 0')
   spec.add_runtime_dependency('dotenv')
-  spec.add_runtime_dependency('ledger_sync', '>= 2.3.1')
+  spec.add_runtime_dependency('ledger_sync', '>= 2.4')
   spec.add_runtime_dependency('nokogiri', '>= 0')
   spec.add_runtime_dependency('oauth2', '>= 0')
 

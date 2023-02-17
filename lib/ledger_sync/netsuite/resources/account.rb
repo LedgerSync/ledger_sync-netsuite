@@ -24,7 +24,8 @@ module LedgerSync
         'deferred_expense' => 'DeferExpense',
         'unbilled_recievable' => 'UnbilledRec',
         'deferred_revenue' => 'DeferRevenue',
-        'non_posting' => 'NonPosting'
+        'non_posting' => 'NonPosting',
+        'statistical' => 'Stat'
       }.freeze
 
       attribute :name, type: Type::String

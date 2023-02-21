@@ -15,7 +15,7 @@ RSpec.describe LedgerSync::NetSuite::Customer::SearcherDeserializer do
       'email' => email,
       'companyname' => companyname,
       'phone' => phone,
-      'lastmodifieddate' => lastmodifieddate,
+      'lastmodifieddate' => lastmodifieddate
     }
   end
 

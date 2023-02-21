@@ -13,7 +13,7 @@ RSpec.describe LedgerSync::NetSuite::Vendor::SearcherDeserializer do
       'id' => id,
       'companyname' => companyname,
       'phone' => phone,
-      'lastmodifieddate' => lastmodifieddate,
+      'lastmodifieddate' => lastmodifieddate
     }
   end
 

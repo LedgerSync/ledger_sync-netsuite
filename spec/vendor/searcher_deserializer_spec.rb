@@ -30,7 +30,7 @@ RSpec.describe LedgerSync::NetSuite::Customer::SearcherDeserializer do
       expect(deserialized_resource.email).to eq(email)
       expect(deserialized_resource.companyName).to eq(companyname)
       expect(deserialized_resource.phone).to eq(phone)
-      expect(deserialized_resource.last_modified_date).to eq(lastmodifieddate)
+      expect(deserialized_resource.lastModifiedDate).to eq(lastmodifieddate)
     end
   end
 end

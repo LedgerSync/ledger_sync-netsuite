@@ -10,7 +10,7 @@ module LedgerSync
         attribute :companyName,
                   hash_attribute: :companyname
         attribute :phone
-        attribute :last_modified_date,
+        attribute :lastModifiedDate,
                   hash_attribute: :lastmodifieddate
       end
     end

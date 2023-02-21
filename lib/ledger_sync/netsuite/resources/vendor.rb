@@ -11,6 +11,7 @@ module LedgerSync
       attribute :first_name, type: Type::String
       attribute :last_name, type: Type::String
       attribute :phone_number, type: Type::String
+      attribute :lastModifiedDate, type: Type::String
       references_one :subsidiary, to: Subsidiary
 
       def name

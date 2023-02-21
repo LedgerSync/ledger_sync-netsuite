@@ -13,6 +13,9 @@ module LedgerSync
 
         attribute :phone_number,
                   hash_attribute: :phone
+
+        attribute :lastModifiedDate,
+                  hash_attribute: :lastmodifieddate
       end
     end
   end

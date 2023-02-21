@@ -3,7 +3,7 @@
 # :nocov:
 module LedgerSync
   module NetSuite
-    VERSION = '0.4.2'
+    VERSION = '0.5.0'
 
     def self.version
       if ENV['PRE_RELEASE']

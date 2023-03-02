@@ -72,6 +72,7 @@ RSpec.shared_examples 'a netsuite searcher' do
 
   let(:client) { netsuite_client } unless method_defined?(:client)
   let(:resource_class) { described_class.inferred_resource_class } unless method_defined?(:resource_class)
+  let(:query) { '' }
   unless method_defined?(:record)
     let(:record) do
       resource_class.resource_type.to_s
@@ -80,25 +81,41 @@ RSpec.shared_examples 'a netsuite searcher' do
   let(:input) do
     {
       client: client,
-      query: ''
+      query: query
     }
   end
+  let(:searcher) { described_class.new(**input) }
 
-  before do
-    stub_search_for_record
+  describe '#query_string' do
+    subject { searcher.query_string }
+
+    it { expect(subject).to end_with("FROM #{searcher.query_table}") }
+
+    context 'when query is present' do
+      let(:query) { 'asdf' }
+
+      it { expect(subject).to end_with("FROM #{searcher.query_table} WHERE asdf") }
+    end
   end
 
-  describe '#resources' do
-    subject { described_class.new(**input).search.resources }
+  context 'when request is made' do
 
-    it { expect(subject.count).to eq(2) }
-    it { expect(subject.first).to be_a(resource_class) }
-  end
+    before do
+      stub_search_for_record
+    end
 
-  describe '#search' do
-    subject { described_class.new(**input).search }
+    describe '#resources' do
+      subject { searcher.search.resources }
 
-    it { expect(subject).to be_success }
-    it { expect(subject).to be_a(LedgerSync::SearchResult::Success) }
+      it { expect(subject.count).to eq(2) }
+      it { expect(subject.first).to be_a(resource_class) }
+    end
+
+    describe '#search' do
+      subject { searcher.search }
+
+      it { expect(subject).to be_success }
+      it { expect(subject).to be_a(LedgerSync::SearchResult::Success) }
+    end
   end
 end

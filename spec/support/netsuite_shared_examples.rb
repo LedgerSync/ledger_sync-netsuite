@@ -99,7 +99,6 @@ RSpec.shared_examples 'a netsuite searcher' do
   end
 
   context 'when request is made' do
-
     before do
       stub_search_for_record
     end

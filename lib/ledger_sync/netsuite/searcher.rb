@@ -10,7 +10,9 @@ module LedgerSync
       end
 
       def query_string
-        "SELECT #{query_attributes.join(', ')} FROM #{query_table}"
+        ret = "SELECT #{query_attributes.join(', ')} FROM #{query_table}"
+        ret += " WHERE #{query}" if query.present?
+        ret
       end
 
       def query_table

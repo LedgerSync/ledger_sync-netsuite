@@ -17,12 +17,31 @@ RSpec.describe LedgerSync::NetSuite::Client do
 
   subject do
     described_class.new(
-      access_token: access_token,
-      client_id: client_id,
-      client_secret: client_secret,
-      realm_id: realm_id,
-      refresh_token: refresh_token,
-      test: test
+      account_id: account_id,
+      consumer_key: consumer_key,
+      consumer_secret: consumer_secret,
+      token_id: token_id,
+      token_secret: token_secret
     )
+  end
+
+  context 'when preventing local urls in api_base_url' do
+    let(:api_base_url) { subject.api_base_url }
+
+    context 'when account_id is localhost/#' do
+      let(:account_id) { 'localhost/#' }
+
+      it 'does not permit localhost/# for account_id' do
+        expect { api_base_url }.to raise_error(LedgerSync::Error::LedgerError::ConfigurationError)
+      end
+    end
+
+    context 'when account_id is 127.0.0.1/#' do
+      let(:account_id) { '127.0.0.1/#' }
+
+      it 'does not permit 127.0.0.1/# for account_id' do
+        expect { api_base_url }.to raise_error(LedgerSync::Error::LedgerError::ConfigurationError)
+      end
+    end
   end
 end

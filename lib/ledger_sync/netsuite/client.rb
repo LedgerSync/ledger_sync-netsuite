@@ -47,7 +47,7 @@ module LedgerSync
           path: '/services/rest/record/v1'
         ).to_s
       rescue URI::InvalidComponentError => e
-        raise LedgerSync::Error::LedgerError::ConfigurationError, e.message
+        raise LedgerSync::Error::LedgerError::ConfigurationError, client: self, message: e.message
       end
 
       def api_host

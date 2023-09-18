@@ -21,7 +21,7 @@ RSpec.describe LedgerSync::NetSuite::Client do
       consumer_key: consumer_key,
       consumer_secret: consumer_secret,
       token_id: token_id,
-      token_secret: token_secret,
+      token_secret: token_secret
     )
   end
 

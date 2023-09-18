@@ -42,7 +42,12 @@ module LedgerSync
       end
 
       def api_base_url
-        @api_base_url ||= "https://#{api_host}/services/rest/record/v1"
+        @api_base_url ||= URI::HTTPS.build(
+          host: api_host,
+          path: '/services/rest/record/v1'
+        ).to_s
+      rescue URI::InvalidComponentError => e
+        raise LedgerSync::Error::LedgerError::ConfigurationError, e.message
       end
 
       def api_host

@@ -37,6 +37,13 @@ module QA
       )
     end
 
+    def known_subsidiary_other
+      LedgerSync::NetSuite::Subsidiary.new(
+        ledger_id: ENV.fetch('NETSUITE_KNOWN_SUBSIDIARY_OTHER_ID'),
+        name: "QA Subsidary #{test_run_id}"
+      )
+    end
+
     def known_expenses_account
       LedgerSync::NetSuite::Account.new(
         ledger_id: ENV.fetch('NETSUITE_KNOWN_EXPENSES_ACCOUNT_ID')
@@ -46,6 +53,12 @@ module QA
     def known_checking_account
       LedgerSync::NetSuite::Account.new(
         ledger_id: ENV.fetch('NETSUITE_KNOWN_CHECKING_ACCOUNT_ID')
+      )
+    end
+
+    def known_checking_account_in_other_subsidary
+      LedgerSync::NetSuite::Account.new(
+        ledger_id: ENV.fetch('NETSUITE_KNOWN_CHECKING_ACCOUNT_IN_OTHER_SUBSIDIARY_ID')
       )
     end
 

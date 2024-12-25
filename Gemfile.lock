@@ -3,7 +3,7 @@ PATH
   specs:
     ledger_sync-netsuite (0.6.2)
       dotenv
-      ledger_sync (>= 2.4)
+      ledger_sync (>= 2.4, <= 3.0)
       nokogiri
       oauth2
 

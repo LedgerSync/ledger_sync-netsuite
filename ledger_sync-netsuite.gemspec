@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors = ['Modern Treasury']
   spec.email = ['ledgersync@moderntreasury.com']
 
-  spec.required_ruby_version = '>= 2.5.8'
+  spec.required_ruby_version = '>= 3.1.6'
 
   spec.summary = 'Sync common objects to accounting software.'
   spec.description = 'LedgerSync is a simple library that allows you to sync common objects to popular accounting ' \
@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency('simplecov-lcov')
   spec.add_development_dependency('webmock', '>= 0')
   spec.add_dependency('dotenv')
-  spec.add_dependency('ledger_sync', '>= 2.4', '<= 3.0')
+  spec.add_dependency('ledger_sync', '>= 3.0', '<= 4.0')
   spec.add_dependency('nokogiri', '>= 0')
   spec.add_dependency('oauth2', '>= 0')
 

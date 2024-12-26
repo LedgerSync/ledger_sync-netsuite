@@ -256,9 +256,7 @@ module NetSuiteHelpers # rubocop:disable Metrics/ModuleLength
 
     define_method(url_method_name) do |**keywords|
       api_record_url(
-        **{
-          record: record
-        }.merge(keywords)
+        record: record, **keywords
       )
     end
 

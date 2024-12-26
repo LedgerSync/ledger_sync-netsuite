@@ -38,10 +38,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency('simplecov')
   spec.add_development_dependency('simplecov-lcov')
   spec.add_development_dependency('webmock', '>= 0')
-  spec.add_runtime_dependency('dotenv')
-  spec.add_runtime_dependency('ledger_sync', '>= 2.4', '<= 3.0')
-  spec.add_runtime_dependency('nokogiri', '>= 0')
-  spec.add_runtime_dependency('oauth2', '>= 0')
+  spec.add_dependency('dotenv')
+  spec.add_dependency('ledger_sync', '>= 2.4', '<= 3.0')
+  spec.add_dependency('nokogiri', '>= 0')
+  spec.add_dependency('oauth2', '>= 0')
 
   spec.metadata['rubygems_mfa_required'] = 'true'
 end

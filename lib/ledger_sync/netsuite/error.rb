@@ -7,9 +7,7 @@ module LedgerSync
         def initialize(message: nil)
           message ||= 'Subsidiaries are not enabled on this account'
 
-          super(
-            message: message
-          )
+          super
         end
       end
     end

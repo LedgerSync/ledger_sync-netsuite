@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ledger_sync-netsuite (0.7.1)
+    ledger_sync-netsuite (1.0.0)
       dotenv
       ledger_sync (>= 3.0, <= 4.0)
       nokogiri
@@ -137,13 +137,13 @@ GEM
       resonad
       simply_serializable (>= 1.5.1)
     logger (1.6.4)
-    mini_portile2 (2.8.8)
     minitest (5.25.4)
     multi_xml (0.6.0)
     multipart-post (2.4.1)
     mutex_m (0.3.0)
-    nokogiri (1.15.7)
-      mini_portile2 (~> 2.8.2)
+    nokogiri (1.15.7-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.15.7-x86_64-linux)
       racc (~> 1.4)
     oauth2 (2.0.9)
       faraday (>= 0.17.3, < 3.0)

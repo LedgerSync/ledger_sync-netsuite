@@ -1,0 +1,208 @@
+{
+    "links": [{
+        "rel": "self",
+        "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/advintercompanyjournalentry/8305?expandSubResources=true"
+    }],
+    "approved": true,
+    "createdDate": "2023-01-25T00:57:00Z",
+    "currency": {
+        "links": [{
+            "rel": "self",
+            "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/currency/1"
+        }],
+        "id": "1",
+        "refName": "US Dollar"
+    },
+    "customForm": {
+        "id": "30",
+        "refName": "Standard Journal Entry"
+    },
+    "id": "8305",
+    "isReversal": false,
+    "lastModifiedDate": "2023-01-25T00:57:00Z",
+    "line": {
+        "links": [{
+            "rel": "self",
+            "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/advintercompanyjournalentry/8305/line"
+        }],
+        "items": [{
+            "links": [],
+            "account": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/account/1"
+                }],
+                "id": "1",
+                "refName": "1000 Checking"
+            },
+            "class": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/classification/1"
+                }],
+                "id": "1",
+                "refName": "Test Ledger Class GTTBUPQK"
+            },
+            "cleared": false,
+            "custcol_2663_isperson": false,
+            "debit": 100.0,
+            "department": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/department/1"
+                }],
+                "id": "1",
+                "refName": "Test Department GTTBUPQK"
+            },
+            "line": 0,
+            "lineBaseCurrency": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/currency/1"
+                }],
+                "id": "1",
+                "refName": "US Dollar"
+            },
+            "lineCurrencyPrecision": "2",
+            "lineFxRate": 1.0,
+            "lineSubsidiary": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/subsidiary/1"
+                }],
+                "id": "1",
+                "refName": "Parent Company"
+            },
+            "lineTotalAmt": 100.0
+        }, {
+            "links": [],
+            "account": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/account/120"
+                }],
+                "id": "120",
+                "refName": "2 Accounts Receivable"
+            },
+            "class": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/classification/701"
+                }],
+                "id": "701",
+                "refName": "Test Class"
+            },
+            "cleared": false,
+            "credit": 100.0,
+            "custcol_2663_isperson": false,
+            "line": 1,
+            "lineBaseCurrency": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/currency/1"
+                }],
+                "id": "1",
+                "refName": "US Dollar"
+            },
+            "lineCurrencyPrecision": "2",
+            "lineFxRate": 1.0,
+            "lineSubsidiary": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/subsidiary/2"
+                }],
+                "id": "2",
+                "refName": "Test Subsidiary"
+            },
+            "lineTotalAmt": 100.0
+        }, {
+            "links": [],
+            "account": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/account/58"
+                }],
+                "id": "58",
+                "refName": "6000 Expenses"
+            },
+            "cleared": false,
+            "credit": 100.0,
+            "custcol_2663_isperson": false,
+            "line": 2,
+            "lineBaseCurrency": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/currency/1"
+                }],
+                "id": "1",
+                "refName": "US Dollar"
+            },
+            "lineCurrencyPrecision": "2",
+            "lineFxRate": 1.0,
+            "lineSubsidiary": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/subsidiary/1"
+                }],
+                "id": "1",
+                "refName": "Parent Company"
+            },
+            "lineTotalAmt": 100.0
+        }, {
+            "links": [],
+            "account": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/account/58"
+                }],
+                "id": "58",
+                "refName": "6000 Expenses"
+            },
+            "cleared": false,
+            "custcol_2663_isperson": false,
+            "debit": 100.0,
+            "line": 3,
+            "lineBaseCurrency": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/currency/1"
+                }],
+                "id": "1",
+                "refName": "US Dollar"
+            },
+            "lineCurrencyPrecision": "2",
+            "lineFxRate": 1.0,
+            "lineSubsidiary": {
+                "links": [{
+                    "rel": "self",
+                    "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/subsidiary/2"
+                }],
+                "id": "2",
+                "refName": "Test Subsidiary"
+            },
+            "lineTotalAmt": 100.0
+        }],
+        "totalResults": 4
+    },
+    "postingPeriod": {
+        "links": [{
+            "rel": "self",
+            "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/accountingperiod/34"
+        }],
+        "id": "34",
+        "refName": "Dec 2022"
+    },
+    "prevDate": "2022-12-29",
+    "reversalDefer": false,
+    "subsidiary": {
+        "links": [{
+            "rel": "self",
+            "href": "https://2155390.suitetalk.api.netsuite.com/services/rest/record/v1/subsidiary/1"
+        }],
+        "id": "1",
+        "refName": "Parent Company"
+    },
+    "tosubsidiaries": "[2]",
+    "tranDate": "2022-12-29",
+    "tranId": "159"
+}
